@@ -1,18 +1,86 @@
-### 👋 Hey there, I’m @ajju853 — but you can call me Azim!
+# Hi, I'm Azim Patel 👋
 
-- 👀 **Passionate About**: Crafting tech-driven solutions that make a difference. I’m on a journey to solve real-world challenges with web development, and I’m fascinated by innovations in AI, IoT, and Quantum Computing. If it’s futuristic, count me in!
-  
-- 🌱 **Always Learning**: Right now, I'm diving deep into advanced frontend development, DevOps, and system design. My goal? To build systems that are as scalable as they are efficient.
+### Software Developer | Full-Stack Engineer | System Design Enthusiast
 
-- 💞️ **Let's Collaborate**: I’m all for teamwork, especially on projects where JavaScript, frontend-only magic, and impactful tech solutions take center stage. Have a vision? Let’s make it a reality together!
+I'm a software developer passionate about building scalable applications, distributed systems, and AI-powered solutions. I enjoy turning complex problems into practical products and continuously exploring modern technologies across software engineering, cloud computing, and data science.
 
-- 📫 **Find Me**: Let’s connect on [LinkedIn](https://www.linkedin.com/in/ajim-patel-b359192ab/) or reach out via email at **ajimp340@gmail.com**. Always open to discussing ideas, projects, or just geeking out over the latest tech trends.
+## 🚀 What I'm Working On
 
-- 😄 **Pronouns**: He/Him
+* Building advanced Full-Stack applications using MERN, Java, Spring Boot, and ASP.NET
+* Studying System Design, Distributed Systems, Cloud Architecture, and DevOps
+* Developing production-grade backend projects with Kafka, Redis, PostgreSQL, and Docker
+* Exploring Machine Learning, Deep Learning, and Data Science
 
-- ⚡ **Fun Fact**: When I'm not behind the screen, you’ll likely find me knee-deep in DIY electronics, experimenting with 3D printing, or contributing to open-source projects. And yes, hackathons are my playground!
+## 💻 Tech Stack
 
-<!---
-ajju853/ajju853 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+**Languages**
+
+* Java
+* JavaScript
+* Python
+* SQL
+* C#
+
+**Frontend**
+
+* React
+* Next.js
+* Tailwind CSS
+* TypeScript
+
+**Backend**
+
+* Node.js
+* Express.js
+* Spring Boot
+* ASP.NET Core
+
+**Databases**
+
+* PostgreSQL
+* MongoDB
+* MySQL
+* Redis
+
+**Cloud & DevOps**
+
+* Docker
+* Kubernetes
+* GitHub Actions
+* AWS
+* Azure
+* GCP
+
+## 🔥 Featured Projects
+
+### AI Resume Analyzer
+
+AI-powered resume analysis platform featuring resume scoring, role prediction, skill-gap analysis, and analytics dashboard.
+
+### Crypto Web App
+
+Full-stack cryptocurrency platform with market data visualization, portfolio tracking, and real-time insights.
+
+### Calorie Tracking System
+
+Food recognition and calorie tracking application powered by AI APIs and nutrition analytics.
+
+### SystemDesignHandbook
+
+A complete handbook covering System Design, Distributed Systems, Cloud Architecture, AWS, Azure, GCP, Kubernetes, DevOps, and Real-World Architectures.
+
+## 🌱 Currently Learning
+
+* Advanced System Design
+* Distributed Systems
+* Event-Driven Architecture
+* Cloud-Native Development
+* Kubernetes
+* Kafka
+
+## 📫 Connect With Me
+
+* LinkedIn: [www.linkedin.com/in/ajim-patel-b359192ab](http://www.linkedin.com/in/ajim-patel-b359192ab)
+* Email: [ajimp340@gmail.com](mailto:ajimp340@gmail.com)
+
+### "Build. Learn. Improve. Repeat."
