@@ -1,4 +1,4 @@
-# Hi, I'm Azim Patel 👋
+# Hi, I'm Ajim Patel 👋
 
 ### Software Developer | Full-Stack Engineer | System Design Enthusiast
 
