@@ -1,86 +1,83 @@
-# Hi, I'm Ajim Patel 👋
+## Hi, I'm Ajim Patel 👋
 
-### Software Developer | Full-Stack Engineer | System Design Enthusiast
+### Backend Engineer | Distributed Systems | Event-Driven Architecture
 
-I'm a software developer passionate about building scalable applications, distributed systems, and AI-powered solutions. I enjoy turning complex problems into practical products and continuously exploring modern technologies across software engineering, cloud computing, and data science.
+I design and build production-grade distributed systems. My focus is on **reliability patterns** — transactional outbox, dead letter queues, idempotent consumers, and saga orchestration — not just CRUD APIs.
 
-## 🚀 What I'm Working On
+---
 
-* Building advanced Full-Stack applications using MERN, Java, Spring Boot, and ASP.NET
-* Studying System Design, Distributed Systems, Cloud Architecture, and DevOps
-* Developing production-grade backend projects with Kafka, Redis, PostgreSQL, and Docker
-* Exploring Machine Learning, Deep Learning, and Data Science
+## 🚀 What I'm Building
 
-## 💻 Tech Stack
+* **Event-driven microservices** with Kafka as the central event bus, supporting 1M+ orders/day
+* **Resilient consumer pipelines** with exponential backoff retry, DLQ routing, and at-least-once semantics
+* **Idempotent event processing** via consumer-side deduplication tables
+* **Transactional Outbox pattern** ensuring atomic database writes + Kafka publishes (no lost events)
+* **Observable systems** with health checks, structured JSON logging, and Prometheus/Grafana dashboards
 
-**Languages**
+---
 
-* Java
-* JavaScript
-* Python
-* SQL
-* C#
+## 💻 Backend Architecture Patterns
 
-**Frontend**
+**Messaging & Eventing**
 
-* React
-* Next.js
-* Tailwind CSS
-* TypeScript
+* Kafka (topics, consumer groups, partitioning, offset management)
+* Event schema design with versioning
+* Dead Letter Queue architecture
+* Exactly-once semantics via idempotent producers
 
-**Backend**
+**Reliability**
 
-* Node.js
-* Express.js
-* Spring Boot
-* ASP.NET Core
+* Transactional Outbox pattern
+* Exponential backoff with jitter
+* Consumer-side idempotency (`processed_events` table)
+* Saga orchestration for distributed transactions
 
-**Databases**
+**Data**
 
-* PostgreSQL
-* MongoDB
-* MySQL
-* Redis
+* PostgreSQL — schema design, indexing, connection pooling, pagination
+* Redis — inventory caching, rate limiting, hot data
+* CQRS — separate write/read models for analytics and audit
 
-**Cloud & DevOps**
+**Infrastructure**
 
-* Docker
-* Kubernetes
-* GitHub Actions
-* AWS
-* Azure
-* GCP
+* Docker Compose for local dev (Kafka + ZK + Postgres + Redis + 5 services)
+* Kubernetes — StatefulSets, Deployments, HPA, ConfigMaps, Secrets, Ingress
+* GitHub Actions — test → build → push → deploy pipeline
 
-## 🔥 Featured Projects
+---
 
-### AI Resume Analyzer
+## 🔥 Flagship Project
 
-AI-powered resume analysis platform featuring resume scoring, role prediction, skill-gap analysis, and analytics dashboard.
+### Kafka Order Management System
 
-### Crypto Web App
+Architecture:
 
-Full-stack cryptocurrency platform with market data visualization, portfolio tracking, and real-time insights.
+```
+Frontend (Next.js)
+      │ REST
+Order Service ──► Kafka ──► Inventory Service (Redis)
+                      │
+                      ├──────────► Notification Service
+                      ├──────────► Analytics Service (PostgreSQL)
+                      └──────────► Audit Service (event sourcing)
+```
 
-### Calorie Tracking System
+**Key design decisions:**
+- **Transactional Outbox** → order + event saved in single DB transaction; background publisher guarantees Kafka delivery
+- **DLQ** → failed events routed to `order-dlq` with full error context; 30-day retention for replay
+- **Idempotency** → each consumer checks `processed_events` table before processing; safe under replays
+- **Retry** → 3 attempts with 5s → 30s → 120s exponential backoff
+- **Horizontal scaling** → 2-10 pods via Kubernetes HPA (CPU/memory based)
 
-Food recognition and calorie tracking application powered by AI APIs and nutrition analytics.
+**Stack:** Node.js, TypeScript, Kafka, PostgreSQL, Redis, Docker, Kubernetes, Next.js
 
-### SystemDesignHandbook
+---
 
-A complete handbook covering System Design, Distributed Systems, Cloud Architecture, AWS, Azure, GCP, Kubernetes, DevOps, and Real-World Architectures.
+## 📫 Connect
 
-## 🌱 Currently Learning
-
-* Advanced System Design
-* Distributed Systems
-* Event-Driven Architecture
-* Cloud-Native Development
-* Kubernetes
-* Kafka
-
-## 📫 Connect With Me
-
-* LinkedIn: [www.linkedin.com/in/ajim-patel-b359192ab](http://www.linkedin.com/in/ajim-patel-b359192ab)
+* LinkedIn: [linkedin.com/in/ajim-patel-b359192ab](http://www.linkedin.com/in/ajim-patel-b359192ab)
 * Email: [ajimp340@gmail.com](mailto:ajimp340@gmail.com)
 
-### "Build. Learn. Improve. Repeat."
+---
+
+### "System design isn't about choosing the right technology. It's about handling the failure before it happens."
