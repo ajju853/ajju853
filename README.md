@@ -1,83 +1,83 @@
 ## Hi, I'm Ajim Patel 👋
 
-### Backend Engineer | Distributed Systems | Event-Driven Architecture
+### Software Engineer | Enterprise Backend Systems | Distributed Architecture
 
-I design and build production-grade distributed systems. My focus is on **reliability patterns** — transactional outbox, dead letter queues, idempotent consumers, and saga orchestration — not just CRUD APIs.
-
----
-
-## 🚀 What I'm Building
-
-* **Event-driven microservices** with Kafka as the central event bus, supporting 1M+ orders/day
-* **Resilient consumer pipelines** with exponential backoff retry, DLQ routing, and at-least-once semantics
-* **Idempotent event processing** via consumer-side deduplication tables
-* **Transactional Outbox pattern** ensuring atomic database writes + Kafka publishes (no lost events)
-* **Observable systems** with health checks, structured JSON logging, and Prometheus/Grafana dashboards
+I build production backend systems, microservices, and workflow automation solutions for enterprise clients. I work across Java/Spring Boot, Python/Flask, and integration middleware (TIBCO BWCE) to orchestrate distributed business processes at manufacturing scale.
 
 ---
 
-## 💻 Backend Architecture Patterns
+## 🔧 What I Build
 
-**Messaging & Eventing**
+**Enterprise Integration Platforms** — Multi-service orchestration with TIBCO BWCE, Spring Cloud Gateway, JWT security, and centralized error handling. Production-style systems with Docker, CI/CD, and full documentation.
 
-* Kafka (topics, consumer groups, partitioning, offset management)
-* Event schema design with versioning
-* Dead Letter Queue architecture
-* Exactly-once semantics via idempotent producers
+**ERP & Manufacturing Systems** — Full-stack ERP integration covering demand creation, BOM management, production tracking, and dispatch. Real-time OEE monitoring dashboards replacing manual status checks for automotive clients.
 
-**Reliability**
+**Automation Workflows** — LLM-powered process automation with LangChain, OpenAI, and Playwright. 60+ RESTful APIs, 7-tab monitoring dashboards, 80% manual effort reduction.
 
-* Transactional Outbox pattern
-* Exponential backoff with jitter
-* Consumer-side idempotency (`processed_events` table)
-* Saga orchestration for distributed transactions
-
-**Data**
-
-* PostgreSQL — schema design, indexing, connection pooling, pagination
-* Redis — inventory caching, rate limiting, hot data
-* CQRS — separate write/read models for analytics and audit
-
-**Infrastructure**
-
-* Docker Compose for local dev (Kafka + ZK + Postgres + Redis + 5 services)
-* Kubernetes — StatefulSets, Deployments, HPA, ConfigMaps, Secrets, Ingress
-* GitHub Actions — test → build → push → deploy pipeline
+**Multi-Tenant SaaS** — Rent invoicing, utility splitting, and automated notifications with Row-Level Security for zero-leakage data isolation.
 
 ---
 
-## 🔥 Flagship Project
+## 💻 Current Stack
+
+| Layer | Technologies |
+|-------|-------------|
+| **Backend** | Java 17, Spring Boot 3, Spring Security, Spring Cloud Gateway, Spring Data JPA, Hibernate |
+| **Integration** | TIBCO BusinessWorks CE, SOA, REST APIs, Swagger/OpenAPI |
+| **Python** | Flask, FastAPI, LangChain, OpenAI API, Playwright |
+| **Database** | PostgreSQL, MongoDB, Redis, MySQL |
+| **DevOps** | Docker, GitHub Actions, Maven, OCI Cloud |
+| **Frontend** | React 18, Next.js 14, TypeScript, Tailwind CSS |
+| **Security** | JWT, OAuth 2.0, RBAC, AES-256, Fernet Encryption |
+
+---
+
+## 🔥 Featured Projects
 
 ### Kafka Order Management System
-
-Architecture:
+5 microservices event-driven architecture with Kafka, Transactional Outbox pattern, Dead Letter Queue, consumer-side idempotency, exponential backoff retry, Redis caching, and Kubernetes deployment. `/kafka-order-system`
 
 ```
-Frontend (Next.js)
-      │ REST
-Order Service ──► Kafka ──► Inventory Service (Redis)
-                      │
-                      ├──────────► Notification Service
-                      ├──────────► Analytics Service (PostgreSQL)
-                      └──────────► Audit Service (event sourcing)
+Node.js, TypeScript, Kafka, PostgreSQL, Redis, Docker, Kubernetes
 ```
 
-**Key design decisions:**
-- **Transactional Outbox** → order + event saved in single DB transaction; background publisher guarantees Kafka delivery
-- **DLQ** → failed events routed to `order-dlq` with full error context; 30-day retention for replay
-- **Idempotency** → each consumer checks `processed_events` table before processing; safe under replays
-- **Retry** → 3 attempts with 5s → 30s → 120s exponential backoff
-- **Horizontal scaling** → 2-10 pods via Kubernetes HPA (CPU/memory based)
+### HR Service Integration Engine
+Enterprise-grade integration platform using TIBCO BWCE as orchestration layer. Automates 7-step employee onboarding across 4 Spring Boot microservices and 6 backend services. Spring Cloud Gateway for centralized routing, JWT validation, rate limiting. Containerized with Docker Compose (8 containers) + GitHub Actions CI/CD.
 
-**Stack:** Node.js, TypeScript, Kafka, PostgreSQL, Redis, Docker, Kubernetes, Next.js
+```
+TIBCO BWCE, Java 17, Spring Boot 3, Spring Cloud Gateway, React 18, PostgreSQL, Docker
+```
+
+### LPS – Line Production System (CIE Automotive)
+Full-stack ERP integration for automotive manufacturing — demand creation, BOM management, production tracking, dispatch. Real-time OEE monitoring dashboard with TanStack Query and Recharts. Sub-machine load-balancing using OOP/design patterns.
+
+```
+React, TypeScript, Flask, PostgreSQL, Redis, TanStack Query, Recharts
+```
+
+### JobMatchAI — Automation Workflow Engine
+Modular multi-service LLM-powered automation integrating resume scoring, routing, and cross-platform job tracking. 60+ RESTful APIs across Flask with 7-tab monitoring dashboard. Unit + integration testing across pipeline stages.
+
+```
+Python, LangChain, OpenAI, FastAPI, Flask, Playwright, Fernet Encryption
+```
+
+### PGFlow — Multi-Tenant SaaS Platform
+Automated rent invoicing, utility splitting, WhatsApp notifications via MSG91 + Razorpay. Supabase RLS for zero-leakage multi-tenant isolation.
+
+```
+Next.js, TypeScript, Supabase, Razorpay, MSG91, Row-Level Security
+```
 
 ---
 
 ## 📫 Connect
 
-* LinkedIn: [linkedin.com/in/ajim-patel-b359192ab](http://www.linkedin.com/in/ajim-patel-b359192ab)
-* Email: [ajimp340@gmail.com](mailto:ajimp340@gmail.com)
+- **GitHub:** [github.com/ajju853](https://github.com/ajju853)
+- **LinkedIn:** [linkedin.com/in/ajim-patel](https://linkedin.com/in/ajim-patel)
+- **Email:** ajimp340@gmail.com
+- **Location:** Pune, India
 
 ---
 
-### "System design isn't about choosing the right technology. It's about handling the failure before it happens."
+### "Enterprise software isn't about features — it's about reliability at scale. Every system I build has to survive production."
